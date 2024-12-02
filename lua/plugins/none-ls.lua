@@ -14,6 +14,7 @@ return {
 				null_ls.builtins.completion.spell,
 				require("none-ls.diagnostics.eslint"), -- requires none-ls-extras.nvim
 				require("none-ls.diagnostics.cpplint"), -- requires none-ls-extras.nvim
+				require("none-ls.formatting.mdslw"), -- requires none-ls-extras.nvim
 			},
 		})
 
