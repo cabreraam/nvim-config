@@ -6,7 +6,7 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		opts = {
-			ensure_installed = { "lua_ls", "texlab" },
+			ensure_installed = { "lua_ls", "texlab", "bashls" },
 		},
 	},
 	{
@@ -53,6 +53,7 @@ return {
 			lspconfig.pyright.setup({})
 			lspconfig.jsonls.setup({})
 			lspconfig.texlab.setup({})
+			lspconfig.bashls.setup({})
 			-- vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
