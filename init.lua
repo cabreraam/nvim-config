@@ -25,4 +25,6 @@ require("config")
 vim.cmd.colorscheme("catppuccin")
 -- Setting bg colors for gitsigns.nvim
 vim.api.nvim_set_hl(0, "GitSignsAddPreview", { bg = "#3b9054" })
+vim.api.nvim_set_hl(0, "GitSignsAddInline", { bg = "#3b9054" })
 vim.api.nvim_set_hl(0, "GitSignsDeletePreview", { bg = "#a04448" })
+vim.api.nvim_set_hl(0, "GitSignsDeleteInline", { bg = "#a04448" })
