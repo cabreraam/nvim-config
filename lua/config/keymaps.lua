@@ -13,6 +13,7 @@ wk.add({
 	{ "<leader>gd", vim.lsp.buf.definition, desc = "Go to defintion", mode = { "n", "v" } },
 	{ "<leader>ca", vim.lsp.buf.code_action, desc = "Code action", mode = { "n", "v" } },
 	{ "<leader>of", vim.diagnostic.open_float, desc = "Float window for diagnostic", mode = { "n", "v" } },
+	{ "<leader>at", "<cmd>AerialToggle!<CR>", desc = "Toggle Aerial Outline", mode = { "n" } },
 	{
 		"<leader>hb",
 		function()
