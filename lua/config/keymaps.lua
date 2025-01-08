@@ -12,6 +12,7 @@ wk.add({
 	{ "<leader>gf", vim.lsp.buf.format, desc = "format code", mode = { "n" } },
 	{ "<leader>gd", vim.lsp.buf.definition, desc = "Go to defintion", mode = { "n", "v" } },
 	{ "<leader>ca", vim.lsp.buf.code_action, desc = "Code action", mode = { "n", "v" } },
+	{ "<leader>of", vim.diagnostic.open_float, desc = "Float window for diagnostic", mode = { "n", "v" } },
 	{
 		"<leader>hb",
 		function()
