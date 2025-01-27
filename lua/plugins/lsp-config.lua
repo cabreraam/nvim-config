@@ -51,7 +51,7 @@ return {
       })
       lspconfig.clangd.setup({})
       lspconfig.pyright.setup({})
-      lspconfig.jsonls.setup({})
+      --lspconfig.jsonls.setup({})
       lspconfig.texlab.setup({})
       lspconfig.bashls.setup({})
       -- vim.keymap.set('n', 'K', vim.lsp.buf.hover)
