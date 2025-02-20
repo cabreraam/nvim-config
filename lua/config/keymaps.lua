@@ -34,4 +34,7 @@ wk.add({
 	{ "<leader>di", dap.step_into, desc = "[nvim-dap] step-into line", mode = { "n" } },
 	{ "<leader>do", dap.step_out, desc = "[nvim-dap] step-out of current stack", mode = { "n" } },
 	{ "<leader>dq", dap.terminate, desc = "[nvim-dap] quit debugging", mode = { "n" } },
+	{ "<leader>dff", dap.focus_frame, desc = "[nvim-dap] focus_frame", mode = { "n" } },
+	{ "<leader>dsu", dap.up, desc = "[nvim-dap] go up one stack frame", mode = { "n" } },
+	{ "<leader>dsd", dap.down, desc = "[nvim-dap] go down one stack frame", mode = { "n" } },
 })
