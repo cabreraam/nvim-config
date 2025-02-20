@@ -1,6 +1,8 @@
 -- telescope
 local builtin = require("telescope.builtin")
 local gitsigns = require("gitsigns")
+local dap = require("dap")
+local dapui = require("dapui")
 
 local wk = require("which-key")
 wk.add({
@@ -24,4 +26,12 @@ wk.add({
 		mode = { "n" },
 	},
 	{ "<leader>hp", gitsigns.preview_hunk, desc = "Gitsigns preview hunk", mode = { "n" } },
+	-- debug keybindings
+	{ "<leader>du", dapui.toggle, desc = "[nvim-dap-ui] toggle DAP UI", mode = { "n" } },
+	{ "<leader>db", dap.toggle_breakpoint, desc = "[nvim-dap] toggle breakpoint", mode = { "n" } },
+	{ "<leader>dc", dap.continue, desc = "[nvim-dap] start/continue", mode = { "n" } },
+	{ "<leader>ds", dap.step_over, desc = "[nvim-dap] step-over line", mode = { "n" } },
+	{ "<leader>di", dap.step_into, desc = "[nvim-dap] step-into line", mode = { "n" } },
+	{ "<leader>do", dap.step_out, desc = "[nvim-dap] step-out of current stack", mode = { "n" } },
+	{ "<leader>dq", dap.terminate, desc = "[nvim-dap] quit debugging", mode = { "n" } },
 })
