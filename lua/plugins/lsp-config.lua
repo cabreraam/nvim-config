@@ -6,7 +6,7 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		opts = {
-			ensure_installed = { "lua_ls", "texlab", "bashls", "ruff", "vhdl_ls", "cmake" },
+			ensure_installed = { "lua_ls", "texlab", "bashls", "ruff", "vhdl_ls", "cmake", "pyright" },
 		},
 	},
 	{
@@ -50,7 +50,6 @@ return {
 				},
 			})
 			lspconfig.clangd.setup({})
-			--lspconfig.pyright.setup({})
 			lspconfig.ruff.setup({})
 			--lspconfig.jsonls.setup({})
 			lspconfig.texlab.setup({})
