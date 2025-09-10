@@ -43,7 +43,7 @@ return {
 					workspace_dir,
 				},
 
-				root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "gradlew" }),
+				--root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "gradlew" }),
 
 				init_options = {
 					bundles = { debug_bundle },
