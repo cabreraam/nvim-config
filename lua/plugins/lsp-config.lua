@@ -10,6 +10,18 @@ return {
 		},
 	},
 	{
+		"jay-babu/mason-nvim-dap.nvim",
+		opts = {
+			ensure_installed = { "cppdbg" }, -- or "codelldb"
+			automatic_installation = true,
+			handlers = {
+				function(config)
+					require("mason-nvim-dap").default_setup(config)
+				end,
+			},
+		},
+	},
+	{
 		"neovim/nvim-lspconfig",
 		--opts = {
 		--}
