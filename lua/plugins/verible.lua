@@ -2,7 +2,7 @@ local M = {
 	"chipsalliance/verible",
 }
 M.config = function()
-	require("lspconfig").verible.setup({
+	vim.lsp.config("verible", {
 		filetypes = { "systemverilog", "verilog" },
 		cmd = { "verible-verilog-ls", "--rules_config_search" }, --, "--file_list_path", "./verible.filelist" },
 		root_dir = function(fname)

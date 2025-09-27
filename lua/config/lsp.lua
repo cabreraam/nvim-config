@@ -1,0 +1,6 @@
+vim.lsp.enable("lua-ls")
+vim.lsp.enable("clangd")
+vim.lsp.enable("ruff")
+vim.lsp.enable("texlab")
+vim.lsp.enable("bashls")
+vim.lsp.enable("vhdl_ls")

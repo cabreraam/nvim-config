@@ -26,8 +26,9 @@ return {
 		--opts = {
 		--}
 		config = function()
-			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({
+			-- local lspconfig = require("lspconfig")
+			-- lspconfig.lua_ls.setup({
+			vim.lsp.config("lua_ls", {
 				on_init = function(client)
 					if client.workspace_folders then
 						local path = client.workspace_folders[1].name
@@ -61,12 +62,16 @@ return {
 					Lua = {},
 				},
 			})
-			lspconfig.clangd.setup({})
-			lspconfig.ruff.setup({})
-			--lspconfig.jsonls.setup({})
-			lspconfig.texlab.setup({})
-			lspconfig.bashls.setup({})
-			lspconfig.vhdl_ls.setup({})
+			--lspconfig.clangd.setup({})
+			--lspconfig.ruff.setup({})
+			--lspconfig.texlab.setup({})
+			--lspconfig.bashls.setup({})
+			--lspconfig.vhdl_ls.setup({})
+			vim.lsp.config("clangd", {})
+			vim.lsp.config("ruff", {})
+			vim.lsp.config("texlab", {})
+			vim.lsp.config("bashls", {})
+			vim.lsp.config("vhdl_ls", {})
 			--#lspconfig.cmake.setup({
 			--#  filetypes = { "cmake", "CMakeLists.txt" },
 			--#})
