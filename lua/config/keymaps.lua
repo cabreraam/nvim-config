@@ -13,6 +13,7 @@ wk.add({
   { "<leader>K",  vim.lsp.buf.hover,               desc = "Hover description",           mode = { "n" } },
   { "<leader>gf", vim.lsp.buf.format,              desc = "format code",                 mode = { "n" } },
   { "<leader>gd", vim.lsp.buf.definition,          desc = "Go to defintion",             mode = { "n", "v" } },
+  { "<leader>gD", vim.lsp.buf.declaration,          desc = "Go to declaration",             mode = { "n", "v" } },
   { "<leader>gr", builtin.lsp_references,          desc = "See references",              mode = { "n", "v" } },
   { "<leader>ca", vim.lsp.buf.code_action,         desc = "Code action",                 mode = { "n", "v" } },
   { "<leader>of", vim.diagnostic.open_float,       desc = "Float window for diagnostic", mode = { "n", "v" } },
