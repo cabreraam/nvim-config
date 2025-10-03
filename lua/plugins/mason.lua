@@ -6,7 +6,7 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		opts = {
-			ensure_installed = { "lua_ls", "texlab", "bashls", "ruff", "vhdl_ls", "cmake", "pyright" },
+			ensure_installed = { "lua_ls", "texlab", "bashls", "ruff", "vhdl_ls", "cmake", "pyright", "neocmake" },
 		},
 	},
 	{
