@@ -77,6 +77,7 @@ return {
         request = "launch",
         name = "Launch with args",
         program = "${file}",
+        python = "python",
 
         -- Use a function to get arguments from user input
         args = function()
