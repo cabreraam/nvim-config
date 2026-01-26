@@ -1,3 +1,5 @@
+local M = {}
+
 local function get_cmake_binary_dir()
   -- find the preset file
   local preset_file = vim.fn.getcwd() .. "/CMakePresets.json"
@@ -37,9 +39,30 @@ local function get_cmake_binary_dir()
   return expand_macros(binary_dir)
 end
 
-local binary_dir = get_cmake_binary_dir()
+-- local binary_dir = get_cmake_binary_dir()
+-- 
+-- vim.lsp.config("clangd", {
+--   cmd = binary_dir and { "clangd", "--compile-commands-dir=" .. binary_dir } or { "clangd" },
+-- })
+-- vim.lsp.enable("clangd")
 
-vim.lsp.config("clangd", {
-  cmd = binary_dir and { "clangd", "--compile-commands-dir=" .. binary_dir } or { "clangd" },
-})
-vim.lsp.enable("clangd")
+
+M.setup = function(capabilities)
+  local compile_commands_dir = get_cmake_binary_dir()
+  local cmd = { "clangd" }
+  if compile_commands_dir then 
+    table.insert(cmd, "--compile-commands-dir=" .. compile_commands_dir)
+  end
+  require("lspconfig").clangd.setup({
+    capabilities = capabilities,
+    cmd = cmd,
+    filetypes = { "c", "cpp", "objc", "objcpp", "inc", "cu" },
+    on_attach = function(client, bufnr)
+      -- optional custom keymaps
+      vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap=true, silent=true })
+    end,
+  })
+end
+
+return M
+
