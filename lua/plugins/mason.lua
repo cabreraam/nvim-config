@@ -8,6 +8,8 @@ return {
 		opts = {
 			ensure_installed = {
 				"lua_ls",
+				"ts_ls",
+				"clangd",
 				"texlab",
 				"bashls",
 				"ruff",
