@@ -17,7 +17,6 @@ return {
 				"cmake",
 				"pyright",
 				"neocmake",
-				"black",
 			},
 		},
 	},
