@@ -14,7 +14,6 @@ return {
 				"bashls",
 				"ruff",
 				"vhdl_ls",
-				"cmake",
 				"pyright",
 				"neocmake",
 			},
