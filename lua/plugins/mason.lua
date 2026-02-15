@@ -15,6 +15,7 @@ return {
         "cmake",
         "pyright",
         "neocmake",
+        "jdtls",
       },
     },
   },
