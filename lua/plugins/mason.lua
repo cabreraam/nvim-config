@@ -16,6 +16,7 @@ return {
         "pyright",
         "neocmake",
         "jdtls",
+        "java-debug-adapter",
       },
     },
   },
