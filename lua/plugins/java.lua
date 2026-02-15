@@ -50,7 +50,7 @@ return {
         },
       }
 
-      --jdtls.start_or_attach(config)
+      jdtls.start_or_attach(config)
       --jdtls.setup_dap({ hotcodereplace = "auto" })
     end,
   },
