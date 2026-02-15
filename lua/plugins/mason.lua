@@ -8,14 +8,14 @@ return {
 		opts = {
 			ensure_installed = {
 				"lua_ls",
-				"ts_ls",
-				"clangd",
 				"texlab",
 				"bashls",
 				"ruff",
 				"vhdl_ls",
+				"cmake",
 				"pyright",
 				"neocmake",
+				"black",
 			},
 		},
 	},
