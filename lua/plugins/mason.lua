@@ -16,14 +16,16 @@ return {
         "pyright",
         "neocmake",
         "jdtls",
-        "java-debug-adapter",
       },
     },
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
     opts = {
-      ensure_installed = { "cppdbg" }, -- or "codelldb"
+      ensure_installed = {
+        "cppdbg",
+        "java-debug-adapter",
+      }, -- or "codelldb"
       automatic_installation = true,
       handlers = {
         function(config)
