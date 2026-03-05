@@ -46,7 +46,7 @@ return {
 				name = "Run executable with arguments (GDB)",
 				type = "cppdbg",
 				command = "gdb",
-				cwd = "{workspaceFolder}",
+				cwd = vim.fn.getcwd(),
 				request = "launch",
 				-- This requires special handling of 'run_last', see
 				-- https://github.com/mfussenegger/nvim-dap/issues/1025#issuecomment-1695852355
