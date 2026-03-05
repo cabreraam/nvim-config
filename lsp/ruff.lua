@@ -6,10 +6,9 @@
 local M = {}
 
 M.setup = function(capabilities)
-  require("lspconfig").ruff.setup({
-    capabilities = capabilities,
-  })
+	require("lspconfig").ruff.setup({
+		capabilities = capabilities,
+	})
 end
 
 return M
-

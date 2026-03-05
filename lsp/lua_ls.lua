@@ -6,7 +6,7 @@
 --         return
 --       end
 --     end
--- 
+--
 --     client.config.settings.Lua = vim.tbl_deep_extend("force", client.config.settings.Lua, {
 --       runtime = {
 --         -- Tell the language server which version of Lua you're using
@@ -32,44 +32,43 @@
 --     Lua = {},
 --   },
 -- })
--- 
+--
 -- vim.lsp.enable("lua-ls")
 --
 
 local M = {}
 
 function M.setup(capabilities)
-  local lspconfig = require("lspconfig")
+	local lspconfig = require("lspconfig")
 
-  lspconfig.lua_ls.setup({
-    capabilities = capabilities,
-    on_init = function(client)
-      if client.workspace_folders then
-        local path = client.workspace_folders[1].name
-        if vim.uv.fs_stat(path .. "/.luarc.json") or vim.uv.fs_stat(path .. "/.luarc.jsonc") then
-          return
-        end
-      end
+	lspconfig.lua_ls.setup({
+		capabilities = capabilities,
+		on_init = function(client)
+			if client.workspace_folders then
+				local path = client.workspace_folders[1].name
+				if vim.uv.fs_stat(path .. "/.luarc.json") or vim.uv.fs_stat(path .. "/.luarc.jsonc") then
+					return
+				end
+			end
 
-      client.config.settings.Lua = vim.tbl_deep_extend("force", client.config.settings.Lua or {}, {
-        runtime = {
-          version = "LuaJIT", -- Tell the language server which Lua version you're using
-        },
-        workspace = {
-          checkThirdParty = false,
-          library = {
-            vim.env.VIMRUNTIME,
-            "${3rd}/luv/library", -- avoids fs_stat warnings
-            -- "${3rd}/busted/library", -- optionally add more
-          },
-        },
-      })
-    end,
-    settings = {
-      Lua = {},
-    },
-  })
+			client.config.settings.Lua = vim.tbl_deep_extend("force", client.config.settings.Lua or {}, {
+				runtime = {
+					version = "LuaJIT", -- Tell the language server which Lua version you're using
+				},
+				workspace = {
+					checkThirdParty = false,
+					library = {
+						vim.env.VIMRUNTIME,
+						"${3rd}/luv/library", -- avoids fs_stat warnings
+						-- "${3rd}/busted/library", -- optionally add more
+					},
+				},
+			})
+		end,
+		settings = {
+			Lua = {},
+		},
+	})
 end
 
 return M
-

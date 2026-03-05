@@ -4,10 +4,9 @@
 local M = {}
 
 M.setup = function(capabilities)
-  require("lspconfig").texlab.setup({
-    capabilities = capabilities,
-  })
+	require("lspconfig").texlab.setup({
+		capabilities = capabilities,
+	})
 end
 
 return M
-
