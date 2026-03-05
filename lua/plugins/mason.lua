@@ -50,4 +50,16 @@ return {
       ensure_installed = { "cpplint" },
     },
   },
+  {
+    "jay-babu/mason-null-ls.nvim",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "nvimtools/none-ls.nvim",
+    },
+    opts = {
+      ensure_installed = { "prettierd" },
+      automatic_installation = true,
+    },
+  },
+
 }
