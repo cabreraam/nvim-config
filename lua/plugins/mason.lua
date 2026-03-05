@@ -57,7 +57,7 @@ return {
       "nvimtools/none-ls.nvim",
     },
     opts = {
-      ensure_installed = { "prettierd" },
+      ensure_installed = {},
       automatic_installation = true,
     },
   },
