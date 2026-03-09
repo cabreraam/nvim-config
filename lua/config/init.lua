@@ -1,6 +1,7 @@
 local modules = {
 	"config.lazy",
 	"config.keymaps",
+	"config.lsp",
 }
 
 -- this will call lazy, $XDG_CONFIG_HOME/.config/nvim/lua/config/lazy.lua
