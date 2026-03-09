@@ -4,6 +4,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 -- list all your LSP modules
 local servers = {
 	"bashls",
+	"basedpyright",
 	"clangd",
 	"cmake",
 	"lua_ls",

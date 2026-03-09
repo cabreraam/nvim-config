@@ -7,13 +7,13 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		opts = {
 			ensure_installed = {
+				"basedpyright",
 				"lua_ls",
 				"texlab",
 				"bashls",
 				"ruff",
 				"vhdl_ls",
 				"cmake",
-				"pyright",
 				"neocmake",
 				"jdtls",
 			},
