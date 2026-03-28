@@ -1,18 +1,13 @@
-local M = {}
-
-function M.setup(capabilities)
-	local lspconfig = require("lspconfig")
-
-	lspconfig.verible.setup({
-		capabilities = capabilities,
-		filetypes = { "systemverilog", "verilog" },
-		cmd = { "verible-verilog-ls", "--rules_config_search" },
-		root_dir = function(fname)
-			local git_root = vim.fs.find(".git", { path = fname, upward = true })[1]
-			return git_root and vim.fs.dirname(git_root) or vim.fn.getcwd()
-		end,
-		autostart = true,
-	})
-end
-
-return M
+return {
+	cmd = { "verible-verilog-ls", "--rules_config_search" },
+	filetypes = { "systemverilog", "verilog" },
+	root_dir = function(bufnr, on_dir)
+		local fname = vim.api.nvim_buf_get_name(bufnr)
+		local git_root = vim.fs.find(".git", { path = fname, upward = true })[1]
+		if git_root then
+			on_dir(vim.fn.fnamemodify(git_root, ":h"))
+		else
+			on_dir(vim.fn.getcwd())
+		end
+	end,
+}
