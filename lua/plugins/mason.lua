@@ -16,6 +16,7 @@ return {
 				"cmake",
 				"neocmake",
 				"jdtls",
+				"marksman",
 			},
 		},
 	},
